@@ -1,6 +1,7 @@
 // Load in our dependencies
 // DEV: We use </> instead of quotes due to it being stdlib
 #include <iostream>
+#include <stdexcept>
 
 // Set up using `std` namespace by default
 using namespace std;
@@ -19,6 +20,9 @@ public:
   double* elem = NULL;
 
   double& operator[] (int index) {
+    if (index < 0 || index >= this->size) {
+      throw out_of_range("Requested index outside of size");
+    }
     return this->elem[index];
   };
 };
@@ -31,4 +35,5 @@ int main()
   list[0] = 20;
   list[1] = 30;
   cout << list.size << " " << list[0] << " " << list[1] << "\n";
+  list[20];
 }
