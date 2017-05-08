@@ -5,19 +5,21 @@
 // Set up using `std` namespace by default
 using namespace std;
 
-// Define a struct
+// Define a class
+// DEV: We could use `_size` and similar for class properties
+//   but `this->` is much more clear
 class List {
 public:
   List(int size) {
-    _size = size;
-    _elem = new double[size];
+    this->size = size;
+    this->elem = new double[size];
   };
 
-  int _size = 0;
-  double* _elem = NULL;
+  int size = 0;
+  double* elem = NULL;
 
   double& operator[] (int index) {
-    return _elem[index];
+    return this->elem[index];
   };
 };
 
@@ -28,5 +30,5 @@ int main()
   List list(2);
   list[0] = 20;
   list[1] = 30;
-  cout << list._size << " " << list[0] << " " << list[1] << "\n";
+  cout << list.size << " " << list[0] << " " << list[1] << "\n";
 }
