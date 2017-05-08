@@ -32,4 +32,8 @@ int main()
 
   char bar = 'm';
   cout << "Dereference address: " << *&bar << "\n";
+
+  char baz = bar;
+  baz = 'n';
+  cout << "Pass by value: " << bar << ", " << baz << "\n";
 }
