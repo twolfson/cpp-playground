@@ -23,6 +23,8 @@ We've done most of these in JS/Python but reapplying them in C++ should hammer n
 - [ ] Data structures (e.g. linked list, stack, queue, tree, heap)
 - [ ] Search algorithms (e.g. linear, binary search)
 - [ ] Sort algorithms (e.g. quicksort, mergesort, heapsort, radix sort)
+- [ ] Linting and style checking
+- [ ] Testing and CI
 
 ## Unlicense
 As of May 08 2017, Todd Wolfson has released this repository and its contents to the public domain.
