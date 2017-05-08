@@ -14,7 +14,7 @@ int main()
   cout << foo[2] << "\n";
 
   // Explore pointers/addresses
-  char *foo_2_ptr = &foo[2];
+  char* foo_2_ptr = &foo[2];
   // DEV: We get `cdef` when outputting the ptr
   //     due to it iterating until it hits a null terminator (i.e. `\x00`) at end of array
   //   cdef
@@ -36,4 +36,8 @@ int main()
   char baz = bar;
   baz = 'n';
   cout << "Pass by value: " << bar << ", " << baz << "\n";
+
+  char& bzz = bar;
+  bzz = 'o';
+  cout << "Reference: " << bar << ", " << bzz << "\n";
 }
