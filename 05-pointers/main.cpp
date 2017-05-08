@@ -40,4 +40,9 @@ int main()
   char& bzz = bar;
   bzz = 'o';
   cout << "Reference: " << bar << ", " << bzz << "\n";
+
+  // Null pointers
+  cout << "Boolean: " << (*(foo_2_ptr+20) == NULL) << "\n";
+  // DEV: This doesn't seem to work =/
+  cout << "Boolean: " << ((foo_2_ptr+20) == nullptr) << "\n";
 }
