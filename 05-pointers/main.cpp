@@ -13,7 +13,7 @@ int main()
   //   c
   cout << foo[2] << "\n";
 
-  // Explore pointers
+  // Explore pointers/addresses
   char* foo_2_ptr = &foo[2];
   // DEV: We get `cdef` when outputting the ptr
   //     due to it iterating until it hits a null terminator (i.e. `\x00`) at end of array
@@ -23,4 +23,8 @@ int main()
   cout << "*ptr: " << *foo_2_ptr << "\n";
   //   0x7fffc814dbf8
   cout << "&ptr: " << &foo_2_ptr << "\n";
+
+  // Explore pointers/addresses
+  char bar[6] = *&foo;
+  cout << "ptr: " << bar << "\n";
 }
