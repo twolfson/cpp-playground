@@ -18,6 +18,7 @@ cd cpp-playground
 ## Concepts to implement/explore
 We've done most of these in JS/Python but reapplying them in C++ should hammer new concepts like pointers home:
 
+- [ ] Structs (already did a little but want more formal definitions)
 - [ ] Nested arrays (or 1 dimensional strided arrays)
 - [ ] Data structures (e.g. linked list, stack, queue, tree, heap)
 - [ ] Search algorithms (e.g. linear, binary search)
