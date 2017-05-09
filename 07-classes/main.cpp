@@ -27,7 +27,8 @@ public:
   };
 
   void increment (int index) {
-    this->operator[](index) += 1;
+    double& val_ref = this->operator[](index);
+    val_ref += 1;
   }
 };
 
