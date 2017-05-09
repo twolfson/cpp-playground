@@ -19,15 +19,18 @@ public:
   int size = 0;
   double* elem = NULL;
 
-  double& operator[] (int index) {
+  double& get (int index) {
     if (index < 0 || index >= this->size) {
       throw out_of_range("Requested index outside of size");
     }
     return this->elem[index];
   };
+  double& operator[] (int index) {
+    return this->get(index);
+  };
 
   void increment (int index) {
-    double& val_ref = this->operator[](index);
+    double& val_ref = this->get(index);
     val_ref += 1;
   }
 };
