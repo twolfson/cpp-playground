@@ -11,13 +11,16 @@ using namespace std;
 //   but `this->` is much more clear
 class List {
 public:
+  int size = 0;
+  double* elem = NULL;
+
   List(int size) {
     this->size = size;
     this->elem = new double[size];
   };
-
-  int size = 0;
-  double* elem = NULL;
+  ~List() {
+    delete[] this->elem;
+  }
 
   double& get (int index) {
     if (index < 0 || index >= this->size) {
