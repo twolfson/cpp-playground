@@ -29,6 +29,9 @@ int main()
   // References
   *foo_2_ptr = 'x';
   cout << "Updated pointer: " << foo << "\n";
+  char* foo_2_ptr2 = foo_2_ptr;
+  *foo_2_ptr2 = 'y';
+  cout << "Updated pointer2: " << foo << "\n";
 
   char bar = 'm';
   cout << "Dereference address: " << *&bar << "\n";
