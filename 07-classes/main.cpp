@@ -25,6 +25,10 @@ public:
     }
     return this->elem[index];
   };
+
+  void increment (int index) {
+    this->operator[](index) += 1;
+  }
 };
 
 // Define our main function
@@ -35,5 +39,7 @@ int main()
   list[0] = 20;
   list[1] = 30;
   cout << list.size << " " << list[0] << " " << list[1] << "\n";
+  list.increment(1);
+  cout << list[1] << "\n";
   list[20];
 }
