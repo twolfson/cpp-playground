@@ -26,6 +26,7 @@ We've done most of these in JS/Python but reapplying them in C++ should hammer n
 - [ ] Linting and style checking
 - [ ] Testing and CI
 - [ ] Explore when variables get cleaned out of scope and as a result destructed (if ever)
+- [ ] Threads
 
 ## Unlicense
 As of May 08 2017, Todd Wolfson has released this repository and its contents to the public domain.
