@@ -28,6 +28,7 @@ We've done most of these in JS/Python but reapplying them in C++ should hammer n
 - [ ] Explore when variables get cleaned out of scope and as a result destructed (if ever)
 - [ ] Threads
 - [ ] Explore linter for explicit includes (e.g. comment based, namespaced, something else)
+- [ ] Reading/writing to a file
 
 ## Unlicense
 As of May 08 2017, Todd Wolfson has released this repository and its contents to the public domain.
