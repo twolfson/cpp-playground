@@ -12,23 +12,25 @@
 // Define our classes
 class Node {
 public:
-  int* val;
+  int val;
   Node* next = NULL;
 
-  Node(int* val, Node* next) {
+  Node(int val) {
+    this->val = val;
+  }
+  Node(int val, Node* next) {
     this->val = val;
     this->next = next;
   }
   ~Node() {
     // TODO: What is `[]` syntax for?
     // TODO: Try out a unique pointer instead of destructor
-    delete this->val;
     delete this->next;
   }
 
   // When we are dereferenced, return our value
   int operator*() {
-    return *this->val;
+    return this->val;
   }
 
   // When we want to move to the next node, return a point to the next one
@@ -46,7 +48,7 @@ public:
   ~LinkedList() {
     // TODO: What is `[]` syntax for?
     // TODO: Try out a unique pointer instead of destructor
-    delete this->head;
+    // delete this->head;
   }
 
   Node* begin() {
@@ -56,7 +58,7 @@ public:
   void push_start(int& val) {
     // TODO: Use a template for dynamic node types
     if (this->head == NULL) {
-      this->head = val;
+      this->head = Node(val);
     } else {
       Node& old_head = this->head;
       this->head = Node(val, old_head);
