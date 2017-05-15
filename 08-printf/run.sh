@@ -9,4 +9,4 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 g++ -Wall main.cpp -o main.out
 
 # Run our file
-./main.out
+valgrind --quiet ./main.out
