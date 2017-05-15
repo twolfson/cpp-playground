@@ -33,6 +33,8 @@ int main()
   // Output our data
   for (int i = 0; i < STATES_AMOUNT; i++) {
     printf("State: %s\n", states[i]);
+    printf("State (ptr+n): %s\n", states[i]+2);
+    printf("State (char): %c\n", states[i][0]);
   }
 
   // Define a nested array
