@@ -29,6 +29,7 @@ We've done most of these in JS/Python but reapplying them in C++ should hammer n
 - [ ] Threads
 - [ ] Explore linter for explicit includes (e.g. comment based, namespaced, something else)
 - [ ] Reading/writing to a file
+- [ ] Random numbers
 
 ## Unlicense
 As of May 08 2017, Todd Wolfson has released this repository and its contents to the public domain.
