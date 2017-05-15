@@ -3,6 +3,7 @@
 // DEV: We are using `c` prefix due to it being a C library
 #include <cassert>
 #include <cstdio>
+#include <cstdlib>
 #include <cstring>
 
 // Taken from http://web.archive.org/web/20150207100809/http://c.learncodethehardway.org:80/book/ex16.html
@@ -12,18 +13,19 @@
 struct Person {
   char* name;
   int age;
-}
+};
 
 struct Person* Person_create(char* name, int age) {
   // Create our person
-  struct Person *person = malloc(sizeof(struct Person));
+  // DEV: Due to using C++, we need to cast `malloc`
+  struct Person* person = (Person*)malloc(sizeof(struct Person));
 
   // Verify we had enough memory for our person
   assert(person != NULL);
 
   // Save our info to the person
   person->name = strdup(name);
-  person->age = strdup(age);
+  person->age = age;
 
   // Return our person
   return person;
@@ -38,6 +40,15 @@ void Person_destroy(struct Person *person) {
   free(person);
 }
 
+void Person_print(struct Person *person) {
+  // Verify we aren't handling a null pointer
+  assert(person != NULL);
+
+  // Output our person's info
+  printf("Name: %s\n", person->name);
+  printf("Age: %d\n", person->age);
+}
+
 // Define our main function
 int main()
 {
@@ -45,7 +56,21 @@ int main()
   struct Person *joe = Person_create("Joe", 32);
   struct Person *frank = Person_create("Frank", 20);
 
-  // TODO: Output info about the people
+  // Output info about the people
+  printf("Joe is at memory location: %p\n", joe);
+  Person_print(joe);
+  printf("Frank is at memory location: %p\n", frank);
+  Person_print(frank);
+
+  // Modify our person's info
+  joe->age += 20;
+  Person_print(joe);
+  frank->age += 20;
+  Person_print(frank);
+
+  // Free up our people
+  Person_destroy(joe);
+  Person_destroy(frank);
 
   // Exit our program
   return 0;
