@@ -34,6 +34,9 @@ We've done most of these in JS/Python but reapplying them in C++ should hammer n
 - [ ] Explore when variables get cleaned out of scope and as a result destructed (if ever)
 - [ ] Threads
 - [ ] Explore linter for explicit includes (e.g. comment based, namespaced, something else)
+    - [x] `-Wall` is great, get "unused variables" already
+    - [ ] cpplint (via Sublime Text's Package Control)
+    - [ ] cppcheck (via Sublime Text's Package Control)
 - [ ] Reading/writing to a file
 - [ ] Random numbers
 
