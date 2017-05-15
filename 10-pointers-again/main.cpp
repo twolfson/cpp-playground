@@ -31,11 +31,11 @@ int main()
   printf("---\n");
 
   // Access our items via pointers with offset
-  int* current_age_ptr = ages;
-  char** current_name_ptr = names;
+  int* head_age_ptr = ages;
+  char** head_name_ptr = names;
   for (i = 0; i < LENGTH; i++) {
     printf("%s has %d years alive.\n",
-      *(current_name_ptr+i), *(current_age_ptr+i));
+      *(head_name_ptr+i), *(head_age_ptr+i));
   }
   printf("---\n");
 
@@ -43,17 +43,20 @@ int main()
   // DEV: I'd prefer to avoid this as I think `[]` is a magic operator for this case
   for (i = 0; i < LENGTH; i++) {
     printf("%s has %d years alive.\n",
-      current_name_ptr[i], current_age_ptr[i]);
+      head_name_ptr[i], head_age_ptr[i]);
   }
   printf("---\n");
 
   // Access our items via pointers as iterators
-  // DEV: We use `current_age_ptr` as comparator against `LENGTH` as `names` doesn't have a simple length
-  for (current_name_ptr = names, current_age_ptr = ages;
-       current_age_ptr < ages + LENGTH;
+  int* current_age_ptr = ages;
+  char** current_name_ptr = names;
+  for (;current_age_ptr < ages + LENGTH;
        current_name_ptr++, current_age_ptr++) {
+    // Sanity check that we haven't hit a null entry
     assert(current_name_ptr < names + LENGTH);
     assert(current_age_ptr < ages + LENGTH);
+
+    // Output our info
     printf("%s has %d years alive.\n",
       *current_name_ptr, *current_age_ptr);
   }
