@@ -37,6 +37,7 @@ We've done most of these in JS/Python but reapplying them in C++ should hammer n
     - [x] `-Wall` is great, get "unused variables" already
     - [ ] cpplint (via Sublime Text's Package Control)
     - [ ] cppcheck (via Sublime Text's Package Control)
+    - [partial] Valgrind
 - [ ] Reading/writing to a file
 - [ ] Random numbers
 
