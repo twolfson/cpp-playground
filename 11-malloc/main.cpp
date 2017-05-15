@@ -31,16 +31,20 @@ struct Person* Person_create(char* name, int age) {
   return person;
 }
 
-void Person_destroy(struct Person *person) {
+// DEV: We use a `*` for the pointer then a `&` to persist a reference so we can update the pointer to NULL
+void Person_destroy(struct Person*& person) {
   // Verify we aren't deleting a null pointer
   assert(person != NULL);
 
   // Release our name pointer and person pointer itself
   free(person->name);
   free(person);
+
+  // Update our person by reference to NULL
+  person = NULL;
 }
 
-void Person_print(struct Person *person) {
+void Person_print(struct Person* person) {
   // Verify we aren't handling a null pointer
   assert(person != NULL);
 
@@ -75,6 +79,9 @@ int main()
   // Free up our people
   Person_destroy(joe);
   Person_destroy(frank);
+
+  // Attempt to output our person's info again
+  Person_print(joe);
 
   // Exit our program
   return 0;
