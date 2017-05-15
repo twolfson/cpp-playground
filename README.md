@@ -1,6 +1,12 @@
 # C++ playground
 Playground environment for one-offs as I learn C++
 
+Examples likely original from:
+
+- Tour of C++ by Bjarne Stroustrup
+- Learn C The Hard Way by Zed Shaw
+- Past experience in other languages
+
 ## Getting Started
 To run one of our programs, run the following steps:
 

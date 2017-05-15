@@ -6,7 +6,7 @@ set -e
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # Compile our file
-g++ main.cpp -o main.out
+g++ -Wall main.cpp -o main.out
 
 # Run our file
 ./main.out
