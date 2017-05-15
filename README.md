@@ -25,19 +25,19 @@ cd cpp-playground
 We've done most of these in JS/Python but reapplying them in C++ should hammer new concepts like pointers home:
 
 - [x] Structs (already did a little but want more formal definitions)
-- [ ] Nested arrays (or 1 dimensional strided arrays)
+- [x] Nested arrays (or 1 dimensional strided arrays)
 - [ ] Data structures (e.g. linked list, stack, queue, tree, heap)
 - [ ] Search algorithms (e.g. linear, binary search)
 - [ ] Sort algorithms (e.g. quicksort, mergesort, heapsort, radix sort)
 - [ ] Linting and style checking
-- [ ] Testing and CI
-- [ ] Explore when variables get cleaned out of scope and as a result destructed (if ever)
-- [ ] Threads
-- [ ] Explore linter for explicit includes (e.g. comment based, namespaced, something else)
     - [x] `-Wall` is great, get "unused variables" already
     - [ ] cpplint (via Sublime Text's Package Control)
     - [ ] cppcheck (via Sublime Text's Package Control)
     - [partial] Valgrind
+- [ ] Testing and CI
+- [ ] Explore when variables get cleaned out of scope and as a result destructed (if ever)
+- [ ] Threads
+- [ ] Explore linter for explicit includes (e.g. comment based, namespaced, something else)
 - [ ] Reading/writing to a file
 - [ ] Random numbers
 
