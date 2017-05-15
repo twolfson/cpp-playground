@@ -8,7 +8,16 @@
 // Define our main function
 int main()
 {
-  // Define some sample data
+  // Define some numeric sample data
+  const int PRIMES_AMOUNT = 4;
+  const int primes[PRIMES_AMOUNT] = {2, 3, 5, 7};
+
+  // Output our data
+  for (int i = 0; i < PRIMES_AMOUNT; i++) {
+    printf("Prime: %d\n", primes[i]);
+  }
+
+  // Define some string sample data
   const int STATES_AMOUNT = 4;
   // DEV: We use `const char` to silence errors about converting strings to `char*`
   //   http://stackoverflow.com/a/16867229
@@ -21,5 +30,13 @@ int main()
   // Output our data
   for (int i = 0; i < STATES_AMOUNT; i++) {
     printf("State: %s\n", states[i]);
+  }
+
+  // Define a nested array
+  int nested_array[2][2] = {{2, 3}, {5, 7}};
+  for (int i = 0; i < 2; i++) {
+    for (int j = 0; j < 2; j++) {
+      printf("Nested value: %d\n", nested_array[i][j]);
+    }
   }
 }
