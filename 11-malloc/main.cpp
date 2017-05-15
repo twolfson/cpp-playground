@@ -46,7 +46,7 @@ void Person_print(struct Person *person) {
 
   // Output our person's info
   printf("Name: %s\n", person->name);
-  printf("Age: %d\n", person->age);
+  printf("  Age: %d\n", person->age);
 }
 
 // Define our main function
@@ -59,14 +59,18 @@ int main()
   // Output info about the people
   printf("Joe is at memory location: %p\n", joe);
   Person_print(joe);
+  printf("\n");
   printf("Frank is at memory location: %p\n", frank);
   Person_print(frank);
+  printf("\n");
 
   // Modify our person's info
   joe->age += 20;
   Person_print(joe);
+  printf("\n");
   frank->age += 20;
   Person_print(frank);
+  printf("\n");
 
   // Free up our people
   Person_destroy(joe);
