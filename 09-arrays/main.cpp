@@ -11,6 +11,7 @@ int main()
   // Define some sample data
   const int STATES_AMOUNT = 4;
   // DEV: We use `const char` to silence errors about converting strings to `char*`
+  //   http://stackoverflow.com/a/16867229
   // DEV: We are generating a 2 dimensional array (i.e. string = array, array of strings = array of arrays)
   const char* states[STATES_AMOUNT] = {
     "California", "Oregon",
